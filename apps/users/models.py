@@ -50,6 +50,25 @@ class UserManager(models.Manager):
                 errors.append('Sorry, email or password were incorrect.')
                 return errors
 
+class JobManager(models.Manager):
+    def validate_job(self, post_data):
+        errors = []
+
+        if len(post_data['title']) < 4:
+            errors.append("Title must be greater than 3 characters.")
+        if len(post_data['description']) < 11:
+            errors.append("Description must be greater than 10 characters.")
+        return errors
+
+    def create_job(self, post_data, user_id):
+        return self.create(
+            title=post_data['title'],
+            description=post_data['description'],
+            location=post_data['location'],
+            creator=user_id
+        )
+
+
 class User(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
@@ -58,3 +77,13 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UserManager()
+
+class Job(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    location = models.CharField(max_length=255)
+    holder = models.ForeignKey(User, related_name="held_jobs", null=True)
+    creator = models.ForeignKey(User, related_name="created_jobs", default=None)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects = JobManager()

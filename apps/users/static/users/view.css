@@ -1,0 +1,33 @@
+.wrapper {
+    margin-left: 20px;
+}
+.back-btn {
+    margin-left: 1700px;
+}
+
+.btn {
+    margin-right: 20px;
+}
+
+.job-info {
+    border: 2px solid black;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.add-btn {
+    margin-top: 15px;
+}
+
+.header {
+    margin-top: 20px;
+}
+
+span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.p1 {
+    font-weight: bold;
+}

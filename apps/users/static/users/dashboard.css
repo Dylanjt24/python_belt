@@ -1,0 +1,44 @@
+.wrapper {
+    margin-left: 50px;
+}
+
+h1 {
+    display: inline-block;
+}
+
+.header {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.header-btn {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.add-job{
+    margin-left: 1300px;
+    font-size: 26px;
+}
+
+.job-btn {
+    float: left;
+    margin-right: 10px;
+}
+
+.all-jobs {
+    width: 800px;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.my-jobs {
+    vertical-align: top;
+    width: 500px;
+    display: inline-block;
+}
+
+td {
+    width: 1000px;
+}

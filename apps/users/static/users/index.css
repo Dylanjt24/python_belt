@@ -1,0 +1,23 @@
+* {
+    margin-left: 10px;
+}
+
+.register-form {
+    width: 500px;
+    display: inline-block;
+}
+
+.login-form {
+    width: 500px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 200px;
+}
+
+.btn {
+    float: right;
+}
+
+li {
+    color: red;
+}

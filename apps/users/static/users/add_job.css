@@ -1,0 +1,33 @@
+.wrapper {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+h1 {
+    display: inline-block;
+}
+
+.header-btn {
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    margin-left: 1500px;
+}
+
+.form-control {
+    width: 400px;
+}
+
+.btn-success {
+    margin-left: 320px;
+}
+
+label {
+    font-weight: bold;
+}
+
+li {
+    color: red;
+}

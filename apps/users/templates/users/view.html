@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Job</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/view.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a href="{% url 'users:dashboard' %}" class="btn btn-primary back-btn">Back</a>
+            <a href="{% url 'users:logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+        <h1>{{ job.title }}</h1>
+        <div class="job-info">
+            <p class="p1">{{ job.description }}</p>
+            <p><span>Location:</span> {{ job.location }}</p>
+            <p><span>Posted by:</span> {{ job.creator.first_name }} {{ job.creator.last_name }}</p>
+            <p><span>Posted on:</span> {{ job.created_at }}</p>
+        </div>
+        <a href="{% url 'users:user_job' job.id %}" class="btn btn-primary job-btn add-btn">Add To My Jobs</a>
+    </div>
+</body>
+</html>
